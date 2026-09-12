@@ -2,53 +2,132 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Camisas</title>
+    <!-- Todo el diseño se maneja aquí mismo con estilos integrados -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #222;
+        }
+
+        /* Estilos del catálogo en cuadrícula */
+        ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        /* Estilos de cada tarjeta de camisa */
+        li {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        li h3 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+
+        li p {
+            color: #888;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 15px 0;
+        }
+
+        /* Estilos del botón */
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Encabezado de la página -->
     <header>
         <h1>Tienda de Camisas</h1>
         <p>Catálogo exclusivo de temporada</p>
     </header>
 
-    <!-- Contenido principal -->
     <main>
         <h2>Nuestras Camisas</h2>
 
-        <!-- Lista de productos -->
         <ul>
             <!-- Producto 1 -->
             <li>
                 <h3>Camisa Oxford Formal</h3>
-                <p>Precio: $39.99</p>
+                <p>$39.99</p>
                 <button>Añadir al carrito</button>
             </li>
 
             <!-- Producto 2 -->
             <li>
                 <h3>Camisa de Lino Casual</h3>
-                <p>Precio: $45.00</p>
+                <p>$45.00</p>
                 <button>Añadir al carrito</button>
             </li>
 
             <!-- Producto 3 -->
             <li>
                 <h3>Camisa Estampada</h3>
-                <p>Precio: $34.95</p>
+                <p>$34.95</p>
                 <button>Añadir al carrito</button>
             </li>
 
             <!-- Producto 4 -->
             <li>
                 <h3>Camisa Denim Premium</h3>
-                <p>Precio: $49.99</p>
+                <p>$49.99</p>
                 <button>Añadir al carrito</button>
             </li>
         </ul>
     </main>
 
-    <!-- Pie de página -->
     <footer>
         <p>&copy; 2026 Tienda de Camisas. Todos los derechos reservados.</p>
     </footer>
