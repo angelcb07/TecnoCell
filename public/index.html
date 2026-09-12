@@ -3,48 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TecnoCell - Venta de Celulares</title>
-    <!-- Vinculamos el archivo CSS externo -->
-    <link rel="stylesheet" href="style.css">
+    <title>Pollería El Pollo Dorado - Sabor a la Brasa</title>
+    <style>
+        /* Estilos básicos para presentación (puedes moverlos a un archivo styles.css) */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #d32f2f;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        .hero {
+            background-color: #fbc02d;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .hero h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5em;
+            color: #d32f2f;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .menu-seccion {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .menu-item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            background: #fff;
+        }
+        .menu-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .precio {
+            color: #d32f2f;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        footer {
+            background-color: #212121;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        .btn-ordenar {
+            background-color: #d32f2f;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .btn-ordenar:hover {
+            background-color: #b71c1c;
+        }
+    </style>
 </head>
 <body>
 
+    <!-- Barra de Navegación -->
     <header>
-        <h1>📱 TecnoCell</h1>
-        <button class="cart-btn" onclick="toggleCart()">Carrito (<span id="cart-count">0</span>)</button>
+        <div class="logo">
+            <h2>🍗 El Pollo Dorado</h2>
+        </div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#menu">Menú</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
     </header>
 
-    <section class="hero">
-        <h2>Los mejores smartphones al mejor precio</h2>
-        <p>Encuentra la última tecnología en la palma de tu mano</p>
+    <!-- Sección de Bienvenida -->
+    <section id="inicio" class="hero">
+        <h1>El auténtico sabor del pollo a la brasa</h1>
+        <p>Disfruta del pollo más jugoso y las papas más crocantes de la ciudad.</p>
+        <a href="#menu" class="btn-ordenar">Ver Menú</a>
     </section>
 
-    <div class="container">
-        <h2 class="section-title">Nuestros Modelos</h2>
-        <div class="products-grid" id="product-list">
-            <!-- Los productos se cargarán dinámicamente con JavaScript -->
-        </div>
-    </div>
+    <!-- Contenido Principal -->
+    <main class="container">
+        
+        <!-- Sección del Menú -->
+        <section id="menu" class="menu-seccion">
+            <h2 style="text-align: center; color: #d32f2f;">Nuestro Menú</h2>
+            
+            <div class="menu-grid">
+                <!-- Ítem 1 -->
+                <div class="menu-item">
+                    <!-- Reemplaza la URL de la imagen por la de tus fotos -->
+                    <img src="https://placeholder.com" alt="1 Pollo a la Brasa">
+                    <h3>1 Pollo a la Brasa</h3>
+                    <p>Acompañado de papas fritas familiares, ensalada fresca y cremas.</p>
+                    <p class="precio">S/ 75.00</p>
+                    <button class="btn-ordenar">Pedir ahora</button>
+                </div>
 
-    <!-- Modal del Carrito -->
-    <div class="cart-modal" id="cartModal">
-        <div class="cart-content">
-            <h3>Tu Carrito de Compras</h3>
-            <ul class="cart-items" id="cartItems">
-                <!-- Ítems del carrito -->
-            </ul>
-            <p><strong>Total: $<span id="cartTotal">0</span></strong></p>
-            <button class="buy-btn" onclick="checkout()" style="margin-top: 1rem;">Finalizar Compra</button>
-            <br>
-            <button class="close-cart" onclick="toggleCart()">Cerrar</button>
-        </div>
-    </div>
+                <!-- Ítem 2 -->
+                <div class="menu-item">
+                    <img src="https://placeholder.com" alt="Medio Pollo a la Brasa">
+                    <h3>1/2 Pollo a la Brasa</h3>
+                    <p>Acompañado de papas fritas, ensalada clásica y cremas de la casa.</p>
+                    <p class="precio">S/ 42.00</p>
+                    <button class="btn-ordenar">Pedir ahora</button>
+                </div>
 
-    <footer>
-        <p>&copy; 2026 TecnoCell. Todos los derechos reservados.</p>
+                <!-- Ítem 3 -->
+                <div class="menu-item">
+                    <img src="https://placeholder.com" alt="Un Cuarto de Pollo">
+                    <h3>1/4 Pollo a la Brasa</h3>
+                    <p>La porción perfecta con papas y ensalada a elección (cocida o fresca).</p>
+                    <p class="precio">S/ 24.00</p>
+                    <button class="btn-ordenar">Pedir ahora</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de Página y Contacto -->
+    <footer id="contacto">
+        <h3>📍 Ubicación y Contacto</h3>
+        <p>Av. Principal 123, Lima, Perú</p>
+        <p>📞 Delivery: (01) 456-7890 | 📱 WhatsApp: +51 999 999 999</p>
+        <p>Horario de atención: Lunes a Domingo de 12:00 PM a 11:00 PM</p>
+        <p style="font-size: 0.8em; margin-top: 20px; color: #aaa;">&copy; 2026 Pollería El Pollo Dorado. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Vinculamos el archivo JS externo -->
-    <script src="script.js"></script>
 </body>
 </html>
